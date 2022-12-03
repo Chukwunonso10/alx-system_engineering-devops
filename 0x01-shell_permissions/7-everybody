@@ -1,2 +1,2 @@
 #!/bin/bash
-chmod ugx
+chmod a=x hello
