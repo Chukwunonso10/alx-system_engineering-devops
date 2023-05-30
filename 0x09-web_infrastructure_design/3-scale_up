@@ -1,0 +1,23 @@
+https://imgur.com/a/qb1BehH
+
+
+Additional Elements:
+Server: An additional server is added to split the components of the web infrastructure onto separate machines. This separation allows for better resource allocation, performance optimization, and scalability.
+
+Load-Balancer Cluster (HAproxy): The load balancer is configured as a cluster, consisting of multiple instances of HAproxy. This setup enhances the availability and reliability of the load-balancing service. If one load balancer node fails, the others can handle the traffic, preventing a single point of failure.
+
+Web Server (Nginx): The web server handles incoming HTTP requests and serves static content. It can also act as a reverse proxy, forwarding dynamic requests to the application server.
+
+Application Server: The application server hosts the application code and processes dynamic requests. It executes the server-side code, handles business logic, and generates dynamic content for the web server to serve.
+
+Database Server (MySQL): The database server stores and manages the website's data. It provides data persistence and retrieval services required by the application server.
+
+By adding these elements, the infrastructure achieves the following:
+
+Improved Scalability: Splitting the components onto separate servers allows each component to scale independently based on its specific requirements. This improves overall scalability and resource utilization.
+
+High Availability: The load balancer cluster ensures high availability by distributing incoming traffic across multiple web server instances. If one web server fails, the load balancer redirects traffic to the healthy servers, ensuring continuous service availability.
+
+Performance Optimization: Separating the application server from the web server allows for optimized resource allocation and better handling of dynamic requests. The application server can process complex business logic and generate dynamic content efficiently, offloading the web server from these tasks.
+
+Enhanced Reliability: With a separate database server, data is stored and managed independently. This separation improves data integrity, reduces the risk of data loss, and allows for dedicated scaling and maintenance of the database layer.
