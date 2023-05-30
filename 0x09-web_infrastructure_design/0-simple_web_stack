@@ -1,0 +1,32 @@
+https://imgur.com/a/tsNHoHZ
+
+
+
+
+
+
+
+1. What is a server: A server is a computer that provides services for other computers known as clients.
+
+2. What is the role of the domain name: It functions as a human readable address for a website inplace of IP address. it is easier to memorise www.foobar.com than 125.52.655.45
+
+3.What type of DNS record www is in www.foobar.com: 'www' is used to denote a sub-domain. 'www.foobar.com' use an 'A record" That is to say that it maps the hostnames to their correct IPV4 addresses
+
+4.What is the role of the web server: A webserver is a software installed on a server. In this case a webserver(Nginx) accepts http request from client computer and responds with the appropriate responses.
+
+5.What is the role of the application server: The application server runs the web application codebase and process dynamic request. It executes scripts, access database and other services for end users.
+
+6.What is the role of the database: database in this case (MysQl) stores and manages the website data .it provides a structured way to stores ,retrieve and manipulate information required by the application .it communicates with the application server. 
+
+7. What is the server using to communicate with the computer of the user requesting the website? The server uses Http to communicate computer
+
+ISSUES WITH THIS INFRASTRUCTURE
+
+1. SPOF (single point of failure ) Since we are only using one server ,any issue with the server results to complete downtime of the website
+
+2.DOWN TIME DURING MAINTENANCE
+When we need to run some maintenace check on any component like updating server configuration ,the website may need to be restarted
+
+3.LIMITED SCALABILITY
+Since this infrastructure uses one server ,it may not be able to handle a high incoming traffic. The server will run out off resources and slow down upon highe traffic.
+
