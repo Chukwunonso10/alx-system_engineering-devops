@@ -1,0 +1,29 @@
+https://imgur.com/a/aULEwJ0
+
+
+Additional Elements:
+
+Load Balancer (HAproxy): The load balancer distributes incoming requests across multiple servers to ensure efficient utilization of resources and improve scalability. It acts as a traffic manager, evenly distributing requests among the web servers.
+Second Web Server: The addition of a second web server provides redundancy and helps prevent a single point of failure (SPOF) by allowing the workload to be distributed across multiple servers.
+MySQL Database Server: The database server stores and manages the website's data. It provides data persistence and retrieval services required by the application server.
+Load Balancer Distribution Algorithm:
+
+The load balancer (HAproxy) can be configured with various distribution algorithms, such as round-robin, least connections, or IP hash. The specific algorithm will depend on the specific requirements and characteristics of the application.
+For example, a round-robin algorithm distributes requests evenly across the available servers, cycling through them in a sequential manner. This ensures that each server receives an equal share of the traffic.
+Active-Active vs. Active-Passive Setup:
+
+In an Active-Active setup, both web servers are actively handling requests, sharing the load evenly. This configuration improves performance and scalability, as both servers are utilized simultaneously.
+In an Active-Passive setup, one server (usually the primary server) actively handles requests, while the other server (replica server) remains idle as a backup. In the event of a failure of the active server, the passive server takes over to ensure high availability.
+Database Primary-Replica (Master-Slave) Cluster:
+
+A Primary-Replica cluster is a database configuration where one server acts as the primary node (master) responsible for handling write operations, while the replica node(s) act as secondary nodes (slaves) that replicate data from the primary node.
+Write operations are performed on the primary node, and the changes are then replicated to the replica nodes asynchronously. This setup provides redundancy, data backup, and improved read scalability.
+Difference between Primary and Replica Nodes:
+
+The Primary node in the database cluster handles write operations and is responsible for maintaining the authoritative copy of the data. It ensures data consistency and handles all write-related transactions from the application.
+Replica nodes replicate the data from the primary node and primarily handle read operations. They act as backups and can be utilized for scaling read-intensive operations, improving performance and availability. However, they do not accept write operations directly.
+
+
+SPOF: Despite the addition of a second web server, there can still be a single point of failure if the load balancer or database server fails. If any of these components become unavailable, the website's availability and performance may be affected.
+
+Security Issues: The infrastructure design lacks
